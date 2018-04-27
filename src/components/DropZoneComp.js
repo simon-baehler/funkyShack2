@@ -8,7 +8,21 @@ class DropZoneComp extends Component {
             accepted: [],
             rejected: []
         }
+
+        this.onDrop = this.onDrop.bind(this)
     }
+
+    onDrop(accepted, rejected) {
+
+        let acceptedFiles = this.state.accepted;
+        acceptedFiles = acceptedFiles.concat(accepted);
+
+
+        this.setState(prevState => ({
+            accepted: acceptedFiles,
+        }))
+    }
+
 
     render() {
         return (
@@ -17,7 +31,7 @@ class DropZoneComp extends Component {
                     <Dropzone
                         className="drop-box"
                         accept="image/jpeg, image/png"
-                        onDrop={(accepted, rejected) => { this.setState({ accepted, rejected }); }}
+                        onDrop={this.onDrop}
                     >
                         <h1>Drop Your file</h1>
                         <p>Seul les fichiers .jpep et png sont acceptés</p>
@@ -25,8 +39,9 @@ class DropZoneComp extends Component {
                     </Dropzone>
                 </div>
                 <aside>
+                    {console.log(this.state.accepted)}
                     <h2>Accepted files</h2>
-                    <ul>
+                    <ul className="image-ul">
                         {
                             this.state.accepted.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>)
                         }

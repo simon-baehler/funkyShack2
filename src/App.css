@@ -34,4 +34,5 @@ body
 
 @import "styles/header.css";
 @import "styles/dropzone.css";
+@import "styles/files.css";
 @import "../node_modules/hover.css/css/hover.css";
