@@ -1,0 +1,51 @@
+.nav {
+  background: #222222;
+  border-bottom: #1C66AB 8px solid;
+  padding: 0 0 0 1rem;
+  margin-bottom: 25px;
+}
+
+.nav .nav-container {
+  width: 1200px;
+  margin: auto;
+  text-align: left;
+}
+
+.nav .nav-container .nav-items {
+  display: inline-block;
+}
+
+.nav .nav-container .nav-items .nav-logo {
+  font-weight: bolder;
+  font-size: 1.5em;
+  line-height: 60px;
+  display: inline-block;
+}
+
+.nav .nav-container .nav-items.linknav {
+  line-height: 80px;
+}
+
+.nav a {
+  color: #1C66AB;
+  transition: all .1s ease;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  line-height: 40px;
+  font-family: "Abel", sans-serif;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nav a.linknav {
+  line-height: 80px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 80%;
+}
