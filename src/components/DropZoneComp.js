@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Dropzone from 'react-dropzone'
+import axios from 'axios';
 
 class DropZoneComp extends Component {
     constructor() {
@@ -11,6 +12,7 @@ class DropZoneComp extends Component {
 
         this.onDrop = this.onDrop.bind(this)
     }
+
 
     onDrop(accepted, rejected) {
 
@@ -39,19 +41,24 @@ class DropZoneComp extends Component {
                     </Dropzone>
                 </div>
                 <aside>
-                    {console.log(this.state.accepted)}
-                    <h2>Accepted files</h2>
-                    <ul className="image-ul">
-                        {
-                            this.state.accepted.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>)
-                        }
-                    </ul>
-                    <h2>Rejected files</h2>
-                    <ul>
-                        {
-                            this.state.rejected.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>)
-                        }
-                    </ul>
+                    <div className="drop-box-wrapper">
+                        <div className="drop-box">
+                            <h2>Accepted files</h2>
+                            <ul className="image-ul">
+                                {
+                                    this.state.accepted.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>)
+                                }
+                            </ul>
+                        </div>
+                        <div className="drop-box">
+                            <h2>Rejected files</h2>
+                            <ul>
+                                {
+                                    this.state.rejected.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>)
+                                }
+                            </ul>
+                        </div>
+                    </div>
                 </aside>
             </section>
         );

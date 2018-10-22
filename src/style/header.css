@@ -1,0 +1,35 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.nav-bar {
+  background: #222222;
+  margin-bottom: 15px;
+}
+.nav-bar_container{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  color: #f7f7f7;
+  text-decoration: none;
+}
+
+.nav-bar_container a{
+  padding: 15px;
+  color: #9b9ba5;
+  text-decoration: none;
+}
+.nav-bar_container img{
+  height: 30px;
+}
+
+.nav-bar_container a:hover{
+  padding: 15px;
+  color: #f7f7f7;
+  text-decoration: none;
+}
+
+

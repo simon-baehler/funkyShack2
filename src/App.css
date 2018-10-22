@@ -29,10 +29,11 @@
 
 body
 {
-  background: #e6e6e6
+  background: #f7f7f7
 }
 
-@import "styles/header.css";
-@import "styles/dropzone.css";
-@import "styles/files.css";
+@import "style/dropzone.css";
+@import "style/files.css";
+@import "style/index.scss";
+@import "style/header.css";
 @import "../node_modules/hover.css/css/hover.css";
